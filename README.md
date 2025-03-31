@@ -1,6 +1,6 @@
 # test-workspace
 
-* After building, add the following into the `function.json` file in the following dirs: `bin\net8.0\Debug\[TimerTrigger, Function1]`:
+* After building, add the following into the `function.json` file in the following dirs: `bin\net8.0\Debug\[TimerTrigger1, Function1]`:
 ```  
   "inputSchema": { },
   "outputSchema": { }
