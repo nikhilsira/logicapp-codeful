@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "APP_KIND": "workflowapp",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "ProjectDirectoryPath": "d:\\Dev\\Codeful\\codeful-logicapp-poc\\test-workspace\\test-app\\workflow-designtime",
+    "AzureWebJobsSecretStorageType": "Files",
+    "WORKFLOWS_SUBSCRIPTION_ID": ""
+  }
+}

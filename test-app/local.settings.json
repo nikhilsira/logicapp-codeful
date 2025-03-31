@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "ProjectDirectoryPath": "d:\\Dev\\Codeful\\codeful-logicapp-poc\\test-workspace\\test-app",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "FUNCTIONS_INPROC_NET8_ENABLED": "1"
+  }
+}

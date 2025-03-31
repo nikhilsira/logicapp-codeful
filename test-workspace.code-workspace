@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "name": "test-app",
+      "path": "./test-app"
+    }
+  ],
+  "settings": {
+    "azurite.location": "C:\\Users\\Nikhil\\.azurelogicapps\\.azurite",
+    "terminal.integrated.env.windows": {
+      "PATH": "C:\\Users\\Nikhil\\.azurelogicapps\\dependencies\\DotNetSDK;${env:PATH}"
+    },
+    "omnisharp.dotNetCliPaths": [
+      "C:\\Users\\Nikhil\\.azurelogicapps\\dependencies\\DotNetSDK"
+    ],
+    "debug.internalConsoleOptions": "neverOpen"
+  }
+}

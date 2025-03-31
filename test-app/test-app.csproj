@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <OutputType>Library</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>test_app</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+	  <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Workflows.WebJobs.Extension" Version="1.114.22" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.DurableTask" Version="2.12.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="test-workflow\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Artifacts\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="connections.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <LibDirectory Include="$(MSBuildProjectDirectory)\lib\**\*" />
+  </ItemGroup>
+  <Target Name="CopyDynamicLibraries" AfterTargets="_GenerateFunctionsExtensionsMetadataPostPublish">
+    <Copy SourceFiles="@(LibDirectory)" DestinationFiles="@(LibDirectory->'$(MSBuildProjectDirectory)\$(PublishUrl)\lib\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+  <ItemGroup>
+    <None Remove="D:\NUGET_PACKAGES\microsoft.azure.workflows.webjobs.extension\1.81.39\build\Microsoft.Azure.Workflows.BuildTasks.DebugSymbolGenerator.runtimeconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="D:\NUGET_PACKAGES\microsoft.azure.workflows.webjobs.extension\1.81.39\build\Microsoft.Azure.Workflows.BuildTasks.DebugSymbolGenerator.runtimeconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="D:\NUGET_PACKAGES\microsoft.azure.workflows.webjobs.extension\1.81.39\build\Microsoft.Azure.Workflows.BuildTasks.DebugSymbolGenerator.runtimeconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="D:\NUGET_PACKAGES\microsoft.azure.workflows.webjobs.extension\1.81.39\build\Microsoft.Azure.Workflows.BuildTasks.DebugSymbolGenerator.runtimeconfig.json" />
+  </ItemGroup>
+</Project>
